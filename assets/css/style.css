@@ -10,6 +10,14 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-white{
+    color: white;
+}
+
+.clear{
+    clear: both;
+}
+
 
 #main {
 
@@ -134,7 +142,96 @@ html{
 
 
 #content {
-    height: 2000px;
+    
+}
+#content .content-section{
+    width: 800px;
+    padding: 64px 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#content .about-text-hn{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.6;
+}
+#content .adress-list{
+    margin-top: 48px;
+    /* overflow: hidden; */
+}
+
+#content .adress-item{
+    float: left;
+    width: 33.3333%;
+    height: auto;
+    text-align: center;
+}
+
+#content .adress-name{
+    
+    font-size: 15px;
+}
+
+#content .adress-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+#content #dn{
+    background-color: rgb(156, 123, 13);
+    
+}
+#content .tour-section{
+    background-color: rgb(102, 78, 236);
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.ticket-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom:1px solid #ddd ;
+    color: #757575;
+    list-style: none;
+}
+
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.ticket-list .quanity{
+    background-color: #000;
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
 }
 
 #footer {
