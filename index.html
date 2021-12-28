@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Du lịch Việt Nam</title>
 </head>
 
@@ -34,9 +35,17 @@
             </ul>
             <!-- End Nav -->
             <!-- begin Search buttonn -->
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+
+
             <!-- end Search buttonn -->
 
         </div>
@@ -351,6 +360,35 @@
             modalContainer.addEventListener('click', function (event) {
                 event.stopPropagation()
             })
+
+        </script>
+
+        <script>
+            var header = document.getElementById('header');
+            var moblieMenu = document.getElementById('mobile-menu');
+            var headerHeight = header.clientHeight;
+            // dong mo mobile menu
+            moblieMenu.onclick = function () {
+                var isClosed = header.clientHeight === headerHeight;
+                if (isClosed) {
+                    header.style.height = 'auto';
+                }
+                else {
+                    header.style.height = '46px';
+                }
+            }
+
+            //tu dong dong khi chon menu
+
+            var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+            for (var i = 0; i < menuItems.length; i++) {
+                var menuItem = menuItems[i];
+                menuItem.onclick = function () {
+                    header.style.height = 'null';
+                }
+            }
+
+
 
         </script>
 
