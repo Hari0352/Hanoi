@@ -1,7 +1,27 @@
 /* Mobile */
-@media (max-width:740px) {
+@media (max-width: 63.9375em) {
+    .btn{
+        padding: 15px 16px;
+    }
+
+    .contact-form .form-control{
+        padding: 15px;
+    }
+
+    .social-list{
+        font-size: 48px;
+    }
+
+    .social-list a{
+        margin: 0 8px;
+    }
+
+}
+
+@media (max-width:46.1875em) {
+    .s-full-width,
     .s-col-full{
-        width: 100%;
+        width: 100% !important;
     }
 
     #header{
@@ -46,6 +66,14 @@
     
     #content .adress-img{
         width: 60%;
+    }
+
+    .contac-form{
+        margin-top: 16px;
+    }
+
+    .form-control{
+        margin-top: 8px;
     }
 
 }
