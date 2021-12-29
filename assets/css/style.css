@@ -83,6 +83,10 @@ html{
     margin-top: 16px !important;
 }
 
+.mt-32{
+    margin-top: 32px !important;
+}
+
 
 
 /* Main */
@@ -99,7 +103,7 @@ html{
     z-index: 1;
     height: 46px;
     background-color: #000;
-    overflow: hidden;
+    
     
 }
 #nav{
@@ -264,7 +268,7 @@ html{
     line-height: 1.6;
 }
 #content .adress-list{
-    margin-top: 48px;
+    margin-top: 32px;
     /* overflow: hidden; */
 }
 
@@ -328,7 +332,7 @@ html{
 }
 
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
     
 }
 

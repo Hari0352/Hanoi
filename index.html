@@ -80,15 +80,15 @@
                 </p>
 
                 <div class="row adress-list">
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
@@ -133,15 +133,15 @@
                     </p>
 
                     <div class="row adress-list">
-                        <div class="col col-third text-center">
+                        <div class="mt-32 s-col-full col col-third text-center">
                             <p class="adress-name text-white">Name</p>
                             <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                         </div>
-                        <div class="col col-third text-center text-white">
+                        <div class="mt-32 s-col-full col col-third text-center text-white">
                             <p class="adress-name">Name</p>
                             <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                         </div>
-                        <div class="col col-third text-center text-white">
+                        <div class="mt-32 s-col-full col col-third text-center text-white">
                             <p class="adress-name">Name</p>
                             <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                         </div>
@@ -170,15 +170,15 @@
                 </p>
 
                 <div class="row adress-list">
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="mt-32 s-col-full col col-third text-center">
                         <p class="adress-name">Name</p>
                         <img src="/assets/img/item/item-1.gif" alt="Name" class="adress-img">
                     </div>
@@ -200,7 +200,7 @@
                     </ul>
                     <!-- place -->
                     <div class="row place-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16 ">
                             <img src="/assets/img/places/item-1.gif" alt="Hanoi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Đà Nẵng</h3>
@@ -210,7 +210,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16 ">
                             <img src="/assets/img/places/item-1.gif" alt="Hanoi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Đà Nẵng</h3>
@@ -220,7 +220,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16 ">
                             <img src="/assets/img/places/item-1.gif" alt="Hanoi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Hạ Long</h3>
@@ -383,8 +383,15 @@
             var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
             for (var i = 0; i < menuItems.length; i++) {
                 var menuItem = menuItems[i];
-                menuItem.onclick = function () {
-                    header.style.height = 'null';
+                menuItem.onclick = function (event) {
+                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                    if (isParentMenu) {
+                        event.preventDefault();
+                    }
+                    else {
+                        header.style.height = 'null';
+
+                    }
                 }
             }
 

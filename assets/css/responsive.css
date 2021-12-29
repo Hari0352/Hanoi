@@ -1,5 +1,13 @@
 /* Mobile */
 @media (max-width:740px) {
+    .s-col-full{
+        width: 100%;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+
     #nav {
         display: block;
     }
@@ -12,6 +20,20 @@
         display: block;
     }
 
+    #nav li a{
+        padding: 1px 24px;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+
     #header .mobile-menu-btn{
         display: block;
     }
@@ -20,6 +42,10 @@
     {
         display: none;
     }
+
     
+    #content .adress-img{
+        width: 60%;
+    }
 
 }
